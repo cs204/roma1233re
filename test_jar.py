@@ -1,3 +1,5 @@
+import pytest #я добавил
+
 from jar import Jar
 
 def test_initial_capacity():
@@ -18,4 +20,12 @@ def test_withdraw_within_capacity():
     jar.deposit(3)
     jar.withdraw(2)
     assert jar.size == 2
+
+#добавьте проверки исключений. Например:
+def test_capacity_positive():
+    jar = Jar()
+    with pytest.raise(ValueError):
+        jar.capacity = -10
+
+
 
