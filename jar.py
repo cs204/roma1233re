@@ -21,14 +21,22 @@ class Jar:
     @property
     def capacity(self):
         return self._capacity
-
+##Надо добавить
+    @capacity.setter
+    def capacity(self, capacity):
+        #проверку надо сюда а не __init__
+        pass
     @property
     def size(self):
         return self._size
-
-    def test_initial_capacity():
-         jar=Jar(10)
-         assert jar.capacity == 10
+    @size.setter
+    def size(self, size):
+        #проверки задание значения
+        pass
+# это не надо, тесы в тесты
+   # def test_initial_capacity():
+    #     jar=Jar(10)
+   #      assert jar.capacity == 10
 
 
 
